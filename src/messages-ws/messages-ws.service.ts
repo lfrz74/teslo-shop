@@ -21,6 +21,7 @@ export class MessagesWsService {
     private readonly userRepository: Repository<User>,
   ) {}
 
+  //Register client
   async registerClient(client: Socket, userId: string) {
     const user = await this.userRepository.findOneBy({ id: userId });
 
